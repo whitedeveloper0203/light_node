@@ -30,10 +30,10 @@ app.use(rendertron.makeMiddleware({
   // injectShadyDom: true
 }));
 
-console.log(__dirname)
+console.log(path.join(__dirname, '../dist'))
 
-app.use(express.static(path.join(__dirname, '/dist')));
-app.use('*', express.static(path.join(__dirname, '/dist')));
+app.use(express.static(path.join(__dirname, '../dist')));
+app.use('*', express.static(path.join(__dirname, '../dist')));
 
 app.listen(4200);
 
