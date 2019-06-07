@@ -32,8 +32,8 @@ app.use(rendertron.makeMiddleware({
 
 console.log(__dirname)
 
-app.use(express.static(path.join(__dirname, '/root/apache-tomcat-7.0.92/webapps/dist')));
-app.use('*', express.static(path.join(__dirname, '/root/apache-tomcat-7.0.92/webapps/dist')));
+app.use(express.static(path.join(__dirname, '/dist')));
+app.use('*', express.static(path.join(__dirname, '/dist')));
 
 app.listen(4200);
 
